@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>To-Do App</title>
+    <link rel="stylesheet" type="text/css" href="h.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <div class="todo"></div>
+        <form name="Mainform" onsubmit="addTask(event)" onclick="document.getElementById('Mainform').value = ''">
+            <label for="taskTitle">Title:</label>
+            <input type="text" id="taskTitle" placeholder="Enter the title" required autocomplete="off">
+            <label for="taskDescription">Description:</label>
+            <input type="text" id="taskDescription" placeholder="Enter the Description" autocomplete="off">
+            <button type="submit">SAVE</button>
+        </form>
+    </div>
+
+
+    <div class="css">
+        <div class="box">
+            <div class="table-container">
+                <h2>TASKLIST</h2>
+
+                <table>
+
+
+
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Complete</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="taskList"></tbody>
+                </table>
+            </div>
+
+        </div>
+        <div class="box">
+
+            <div class="table-container">
+                <H2>PENDING LIST</H2>
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="pendingList"></tbody>
+                </table>
+            </div>
+        </div>
+        <div class="box">
+            <div class="table-container">
+                <H2>COMPLETED LIST</H2>
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Completed At</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="completedList"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
